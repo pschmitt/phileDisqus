@@ -13,6 +13,7 @@
 class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventObserverInterface {
 
     private $config;
+    private $disqus_id;
 
     public function __construct() {
         \Phile\Event::registerEvent('config_loaded', $this);
@@ -28,10 +29,9 @@ class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventOb
         }
     }
 
-
     public function config_loaded() {
-        if (isset($config['disqus_id'])) {
-            $this->disqus_id = $config['disqus_id'];
+        if (isset($this->config['disqus_id'])) {
+            $this->disqus_id = $this->config['disqus_id'];
         }
     }
 
