@@ -60,7 +60,7 @@ class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventOb
             $twig_vars['disqus_comments'] = '
             <!-- An element a visitor can click if they <3 comments! -->
             <div id="show-comments-wrapper">
-                <a class="show-comments" href="#">Load Disqus comments</a>
+                <a class="show-comments" href="javascript:void(0)">Load Disqus comments</a>
                 <!--button class="show-comments">Load Disqus comments</button-->
             </div>
             <!-- The empty element required for Disqus to loads comments into -->
