@@ -2,6 +2,8 @@
 
 /**
  * Embed disqus in your website
+ * Requires jquery
+ * 
  * @package Phile
  * @subpackage PhileDisqus
  * @version 1.0
@@ -20,6 +22,9 @@ class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventOb
         \Phile\Event::registerEvent('config_loaded', $this);
         \Phile\Event::registerEvent('before_render_template', $this);
         $this->config = \Phile\Registry::get('Phile_Settings');
+        
+        // init
+        $this->onclick = true;
     }
 
     public function on($eventKey, $data = null) {
@@ -40,8 +45,6 @@ class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventOb
         }
         if (isset($this->config['disqus_load_on_click'])) {
             $this->onclick = isset($this->config['disqus_load_on_click']);
-        } else {
-            $this->onclick = true;
         }
     }
 
