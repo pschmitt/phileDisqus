@@ -1,18 +1,20 @@
 <?php
 
+namespace Phile\Plugin\Pschmitt\Disqus;
+
 /**
  * Embed disqus in your website
  * Requires jquery
  *
- * @package Phile
- * @subpackage PhileDisqus
- * @version 1.0
- * @author Philipp Schmitt <philipp@schmitt.co>
+ * @author  Philipp Schmitt <philipp@schmitt.co>
+ * @link    http://lxl.io
  * @license http://opensource.org/licenses/GPL-3.0
- * @link https://github.com/pschmitt/phileDisqus
- * @link http://philecms.github.io/Phile
+ * @link    https://github.com/pschmitt/phileDisqus
+ * @package Phile\Plugin\Pschmitt\Users
+ * @version 1.0.1
  */
-class PhileDisqus extends \Phile\Plugin\AbstractPlugin implements \Phile\EventObserverInterface {
+
+class Plugin extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\EventObserverInterface {
 
     private $config;
     private $disqus_id;

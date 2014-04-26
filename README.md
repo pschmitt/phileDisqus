@@ -2,12 +2,23 @@
 
 Phile plugin for embedding Disqus in your website
 
+## Installation
+
+Clone this repo to `plugins/pschmitt/disqus`:
+
+```bash
+mkdir -p ~http/plugins/pschmitt
+git clone https://github.com/pschmitt/phileDisqus.git /srv/http/plugins/pschmitt/disqus
+# You may consider using a submodule for this
+git submodule add http://github.com/pschmitt/phileDisqus.git /srv/http/plugins/pschmitt/disqus
+```
+
 ## Usage
 
 Add your Disqus ID to `config.php`:
 
 ```php
-$config['disqus_id'] = 'MYID'; 
+$config['disqus_id'] = 'MYID';
 ```
 
 and activate the plugin:
@@ -15,7 +26,7 @@ and activate the plugin:
 ```php
 $config['plugins'] = array(
     // [...]
-    'phileDisqus' => array('active' => true),
+    'pschmitt\\disqus' => array('active' => true),
 );
 ```
 
